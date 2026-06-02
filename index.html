@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UVG Lab Space</title>
+<link rel="icon" href="logo.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,Arial,sans-serif;
+}
+
+body{
+background:
+url("fondo.png") repeat,
+#ffffff;
+color:#1f2937;
+overflow-x:hidden;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+min-height:90vh;
+}
+
+.left{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:20px;
+margin-bottom:10px;
+}
+
+.jack{
+width:140px;
+}
+
+.logo{
+width:160px;
+}
+
+.subtitle{
+font-size:1.2rem;
+color:#6b7280;
+max-width:550px;
+line-height:1.6;
+}
+
+.status{
+color:#6b7280;
+font-size:14px;
+font-style:italic;
+}
+
+.btn{
+background:#006b5f;
+color:white;
+padding:16px 32px;
+border:none;
+border-radius:14px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+width:max-content;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(0,107,95,.25);
+}
+
+.video-container{
+display:flex;
+justify-content:center;
+}
+
+.video-container video{
+width:100%;
+max-width:540px;
+border-radius:24px;
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2.3rem;
+margin-bottom:15px;
+color:#006b5f;
+}
+
+.section-subtitle{
+text-align:center;
+color:#6b7280;
+margin-bottom:50px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:1.1rem;
+color:#006b5f;
+}
+
+.card p{
+color:#6b7280;
+line-height:1.5;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#6b7280;
+font-size:14px;
+border-top:1px solid #e5e7eb;
+margin-top:40px;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.left{
+align-items:center;
+}
+
+.brand{
+justify-content:center;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="hero">
+
+<div class="left">
+
+<div class="brand">
+<img src="jack.png" class="jack" alt="Jack">
+<img src="logo.png" class="logo" alt="UVG Lab Space">
+</div>
+
+<p class="subtitle">
+Gestión de prácticas y comunicación del Lab Space.
+</p>
+
+<button class="btn" onclick="descargar()">
+Descargar ahora
+</button>
+
+</div>
+
+<div class="video-container">
+<video autoplay muted loop playsinline>
+<source src="promo.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Todo en un solo lugar</h2>
+
+<p class="section-subtitle">
+Reserva espacios, comparte experiencias y conecta con la comunidad UVG.
+</p>
+
+<div class="features">
+
+<div class="card">
+<h3>Reserva tu laboratorio</h3>
+<p>Solicita espacios y prácticas de forma sencilla.</p>
+</div>
+
+<div class="card">
+<h3>Publica tus prácticas</h3>
+<p>Comparte experiencias y actividades con la comunidad.</p>
+</div>
+
+<div class="card">
+<h3>Conecta con la comunidad</h3>
+<p>Interactúa con estudiantes, docentes y personal.</p>
+</div>
+
+<div class="card">
+<h3>Controla tus materiales</h3>
+<p>Consulta recursos y materiales disponibles.</p>
+</div>
+
+<div class="card">
+<h3>Domina tus estadísticas</h3>
+<p>Visualiza actividad, reservas y participación.</p>
+</div>
+
+<div class="card">
+<h3>Gestiona todo en LabSpace</h3>
+<p>Todo el ecosistema de laboratorios en una sola app.</p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 UVG Lab Space — Desarrollado por Edwin Juárez y Evere Cardona
+</footer>
+
+<script>
+
+function descargar(){
+
+window.location.href =
+"https://github.com/TU_USUARIO/TU_REPOSITORIO/releases/download/v1.0/labspace.apk";
+
+}
+
+</script>
+
+</body>
+</html>
